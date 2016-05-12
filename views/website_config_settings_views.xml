@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="name">Website Blog - Disqus settings</field>
+        <field name="model">website.config.settings</field>
+        <field name="inherit_id" ref="website.view_website_config_settings"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='advanced']" position="before">
+                <group string="Disqus">
+                    <label for="disqus_active"/>
+                    <div name="disqus_active">
+                        <div>
+                            <div name="disqus_active" class="oe_inline">
+                                <field name="disqus_active"/>
+                            </div>
+                        </div>
+                    </div>
+                </group>
+                <group attrs="{'invisible': [('disqus_active', '=', False)]}">
+                   	<label for="disqus_src_embed"/>
+                    <div name="disqus_src_embed">
+                        <div>
+                            <div name="disqus_src_embed" class="oe_inline">
+                                <field name="disqus_src_embed"
+                                	placeholder="EXAMPLE.disqus.com/embed.js"
+                                	attrs="{'required': [('disqus_active', '=', True)]}"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <label for="disqus_hide_footer"/>
+                    <div name="disqus_hide_footer">
+                        <div>
+                            <div name="disqus_hide_footer" class="oe_inline">
+                                <field name="disqus_hide_footer"/>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="disqus_src_count"/>
+                    <div name="disqus_src_count">
+                        <div>
+                            <div name="disqus_src_count" class="oe_inline">
+                                <field name="disqus_src_count"
+                                	placeholder="EXAMPLE.disqus.com/count.js"/>
+                            </div>
+                        </div>
+                    </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    </data>
+</openerp>

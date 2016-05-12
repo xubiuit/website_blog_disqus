@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+	
+		<template id="blog_post_complete" inherit_id="website_blog.blog_post_complete" name="Blog Post">
+		
+			<!-- INSERT DISQUS COMMENT -->
+			<xpath expr="//div[@id='blog_content']" position="after">
+				<t t-if="website.disqus_active">
+					<section>
+						<div class="container">
+							<div class="row">
+								<div id="disqus_thread"></div>
+							</div>
+						</div>
+					</section>
+					<script>
+						/**
+						* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+						* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+						*/
+						
+						var disqus_config = function () {
+						this.page.url = window.location.href; // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = '<t t-esc="str(blog_post.website_url)"/>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						};
+						
+						(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						
+						/* s.src = '//xubi.disqus.com/embed.js'; */
+						s.src = '//<t t-raw="website.disqus_src_embed" />';
+						
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+				</t>
+			</xpath>
+		</template>
+		
+		<template id="layout" inherit_id="website.layout" name="Main layout">
+			<xpath expr="//head" position="inside">
+				<!-- HIDE DISQUS FOOTER -->
+				<t t-if="website.disqus_active and website.disqus_hide_footer">
+					<style>
+						/*
+							DISQUS Customize
+						*/
+						#disqus_thread{
+						     position: relative;
+						}
+						#disqus_thread:after{
+						     content: "";
+						     display: block;
+						     height: 55px;
+						     width: 100%;
+						     position: absolute;
+						     bottom: 0px;
+						     background:white;
+						}
+					</style>
+				</t>
+			</xpath>
+			
+			<xpath expr="//body" position="inside">
+				<t t-if="website.disqus_active and website.disqus_src_count">
+					<script id="dsq-count-scr" t-att-src="'//' + website.disqus_src_count" async="async"></script>
+				</t>
+			</xpath>
+		</template>
+		
+		<template id="blog_post_short" inherit_id="website_blog.blog_post_short" name="Blog Posts">
+			<xpath expr="//div[@name='blog_post_data']" position="inside">
+				<t t-if="website.disqus_active and website.disqus_src_count">
+					<span class="post_comment_no" t-if="blog_post.website_published"> - 
+						<a t-attf-href="#{ blog_post.website_url + '#disqus_thread' }"></a>
+	                </span>
+               	</t>
+			</xpath>
+		</template>
+	</data>
+</openerp>
