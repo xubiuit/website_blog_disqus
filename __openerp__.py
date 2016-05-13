@@ -38,7 +38,7 @@ Copyright, Authors and Licence:
     * Author:
         * binhnguyenxuan (https://www.linkedin.com/in/binh-nguyen-xuan-46556279)
     * Licence: AGPL-3 (http://www.gnu.org/licenses/);""",
-    'author': "binhnguyenxuan, Odoo Community Association (OCA)",
+    'author': "binhnguyenxuan (https://www.linkedin.com/in/binh-nguyen-xuan-46556279)",
     'website': 'http://www.xubi.me',
     'license': 'AGPL-3',
     'depends': [
