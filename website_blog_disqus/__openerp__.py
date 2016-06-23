@@ -24,7 +24,7 @@
     'summary': 'Website_Blog - DISQUS Integration',
     'version': '9.0.1.0.0',
     'category': 'Website',
-    'description': """
+    'summary': """
 Website_Blog - DISQUS Integration
 ==================================================
 
@@ -36,9 +36,9 @@ Copyright, Authors and Licence:
 -------------------------------
     * Copyright (C) 2016- XUBI.ME (http://www.xubi.me)
     * Author:
-        * binhnguyenxuan (https://www.linkedin.com/in/binh-nguyen-xuan-46556279)
+        * binhnguyenxuan (http://www.xubi.me)
     * Licence: AGPL-3 (http://www.gnu.org/licenses/);""",
-    'author': "binhnguyenxuan (https://www.linkedin.com/in/binh-nguyen-xuan-46556279)",
+    'author': "binhnguyenxuan (http://www.xubi.me)",
     'website': 'http://www.xubi.me',
     'license': 'AGPL-3',
     'depends': [
@@ -51,4 +51,5 @@ Copyright, Authors and Licence:
     'qweb': [
     ],
     'installable': True,
+    'application': True,
 }
