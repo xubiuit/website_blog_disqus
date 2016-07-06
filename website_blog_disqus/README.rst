@@ -29,17 +29,20 @@ Configuration
 ============
 
 Create your Disqus account at: https://disqus.com/
+-------------------------------------------------
 
 Get your universal code at: https://disqus.com/admin/universalcode/
-
+------------------------------------------------------------------
+|
 .. figure:: universal_code.jpg
    :scale: 80 %
    :alt: Get disqus Universal Code
-
-
+|
+Actually you just need remember your disqus_account
+|
 Config with Odoo
-
-
+---------------
+|
 .. figure:: config.jpg
    :scale: 80 %
    :alt: Config Disqus with your disqus account

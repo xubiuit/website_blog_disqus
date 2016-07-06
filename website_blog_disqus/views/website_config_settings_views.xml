@@ -24,7 +24,7 @@
                         <div>
                             <div name="disqus_src_embed" class="oe_inline">
                                 <field name="disqus_src_embed"
-                                	placeholder="your_disqus_account_name.disqus.com/embed.js"
+                                	placeholder="YOUR_DISQUS_ACCOUNT_NAME.disqus.com/embed.js"
                                 	attrs="{'required': [('disqus_active', '=', True)]}"/>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                         <div>
                             <div name="disqus_src_count" class="oe_inline">
                                 <field name="disqus_src_count"
-                                	placeholder="your_disqus_account_name.disqus.com/count.js"/>
+                                	placeholder="YOUR_DISQUS_ACCOUNT_NAME.disqus.com/count.js"/>
                             </div>
                         </div>
                     </div>
