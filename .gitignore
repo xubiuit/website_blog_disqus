@@ -1,4 +1,5 @@
 # Untracked files:
+bin/
 *.pyc
 .settings/
 .project

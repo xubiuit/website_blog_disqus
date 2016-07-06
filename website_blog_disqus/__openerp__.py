@@ -26,19 +26,8 @@
     'category': 'Website',
     'summary': """
 Website_Blog - DISQUS Integration
-==================================================
-
-Functionality:
---------------
-    * Display Disqus comments for all of Blog post
-
-Copyright, Authors and Licence:
--------------------------------
-    * Copyright (C) 2016- XUBI.ME (http://www.xubi.me)
-    * Author:
-        * binhnguyenxuan (http://www.xubi.me)
-    * Licence: AGPL-3 (http://www.gnu.org/licenses/);""",
-    'author': "binhnguyenxuan (http://www.xubi.me)",
+""",
+    'author': "binhnguyenxuan (www.xubi.me)",
     'website': 'http://www.xubi.me',
     'license': 'AGPL-3',
     'depends': [
